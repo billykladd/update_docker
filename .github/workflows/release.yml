@@ -3,7 +3,6 @@ name: ci
 on:
   schedule:
     - cron: '0 3 * * *'
-  workflow_dispatch:
   push:
     branches:
       - 'main'
@@ -41,6 +40,4 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          #tags: psyenc/svtav1enc:hdr
-          #tags: psyenc/svtav1enc:latest
           tags: psyenc/svtav1enc:essential
